@@ -1,0 +1,54 @@
+@import "../../mixin.scss";
+.SearchBox {
+  margin-top: 4rem;
+  background-color: #f1f3f4;
+  border: none;
+  border-radius: 22px;
+  box-shadow: none;
+  outline: none;
+  opacity: 1;
+  transition: background-color 300ms ease-in-out;
+  transition: opacity 200ms;
+  width: 67.4rem;
+  max-width: 56rem;
+  @include respond(phone) {
+    width: 40rem;
+  }
+  height: 44px;
+  cursor: text;
+  display: inline-block;
+  font: 18px arial, sans-serif;
+  line-height: 36px;
+  position: relative;
+  ::placeholder {
+    color: rgb(128, 134, 139);
+    font-family: "Roboto", arial, sans-serif;
+    font-size: 1.8rem;
+    left: 0;
+    padding-left: 20px;
+    bottom: 4px;
+    right: 13px;
+    top: 4px;
+    margin-top: 1px;
+    overflow: hidden;
+    position: absolute;
+    text-align: initial;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    visibility: inherit;
+  }
+  &__Input {
+    background: transparent;
+    border: none;
+    bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    margin: 0;
+    outline: none;
+    padding: 0 8px;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+}
