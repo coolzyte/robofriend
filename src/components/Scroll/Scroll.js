@@ -4,7 +4,7 @@ const scroll = ({ children }) => {
   return (
     <div
       style={{
-        overflow: "scroll",
+        overflowY: "scroll",
         height: "100%"
       }}
     >
