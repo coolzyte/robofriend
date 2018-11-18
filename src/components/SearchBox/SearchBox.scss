@@ -9,7 +9,7 @@
   opacity: 1;
   transition: background-color 300ms ease-in-out;
   transition: opacity 200ms;
-  width: 67.4rem;
+  width: 30rem;
   max-width: 56rem;
   @include respond(phone) {
     width: 40rem;
@@ -17,7 +17,8 @@
   height: 44px;
   cursor: text;
   display: inline-block;
-  font: 18px arial, sans-serif;
+  font: 18px arial,
+  sans-serif;
   line-height: 36px;
   position: relative;
   ::placeholder {

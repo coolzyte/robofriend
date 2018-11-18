@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.scss";
 import CardList from "../components/CardList/CardList";
 import SearchBox from "../components/SearchBox/SearchBox";
+import Scroll from "../components/Scroll/Scroll";
 
 class App extends Component {
   constructor() {
@@ -30,10 +31,17 @@ class App extends Component {
       return <h1>Loading</h1>;
     } else {
       return (
-        <div className="App Wrapper">
-          <h1>RoboFriends</h1>
-          <SearchBox searchChange={this.onSearchChange} />
-          <CardList robots={filteredRobots} />
+        <div className="container App">
+          <div className="header">
+            <h1>RoboFriends</h1>
+            <SearchBox searchChange={this.onSearchChange} />
+          </div>
+          <div className="main">
+            <Scroll>
+              <CardList robots={filteredRobots} />
+            </Scroll>
+          </div>
+          <div className="footer">&copy; Created by Coolzyte</div>
         </div>
       );
     }
