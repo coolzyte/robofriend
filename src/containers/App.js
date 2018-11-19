@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import "./App.scss";
 import CardList from "../components/CardList/CardList";
 import SearchBox from "../components/SearchBox/SearchBox";
 import Scroll from "../components/Scroll/Scroll";
+import ErrorBoundry from "../components/ErrorBoundry/ErrorBoundry";
+import "./App.scss";
 
 class App extends Component {
   constructor() {
@@ -36,7 +37,9 @@ class App extends Component {
         </div>
         <div className="main">
           <Scroll>
-            <CardList robots={filteredRobots} />
+            <ErrorBoundry>
+              <CardList robots={filteredRobots} />
+            </ErrorBoundry>
           </Scroll>
         </div>
         <div className="footer">&copy; Created by Coolzyte</div>
