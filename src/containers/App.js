@@ -4,6 +4,7 @@ import CardList from "../components/CardList/CardList";
 import SearchBox from "../components/SearchBox/SearchBox";
 import Scroll from "../components/Scroll/Scroll";
 import ErrorBoundry from "../components/ErrorBoundry/ErrorBoundry";
+import Header from "../components/Header/Header";
 import "./App.scss";
 
 import { setSearchField, requestRobots } from "../actions";
@@ -39,7 +40,7 @@ class App extends Component {
     ) : (
       <div className="container App">
         <div className="header">
-          <h1>RoboFriends</h1>
+          <Header />
           <SearchBox searchChange={onSearchChange} />
         </div>
         <div className="main">

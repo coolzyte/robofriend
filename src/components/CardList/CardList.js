@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import "./CardList.scss";
 
 const cardlist = ({ robots }) => {
+  console.log("CardList");
   return (
     <div className="CardList">
       {robots.map((user, i) => {
